@@ -1,0 +1,84 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend Z</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Trend Z</div>
+        <nav>
+            <input type="text" placeholder="Search products..." id="searchInput">
+            <button onclick="searchProduct()">Search</button>
+            <button onclick="loginPopup()">Login</button>
+            <span class="cart">Cart: <span id="cartCount">0</span></span>
+        </nav>
+    </header>
+
+    <section class="products">
+        <h2>Men's Collection</h2>
+        <div class="product-list">
+            <div class="product" data-name="Classic Shirt">
+                <img src="c t/Pack-04-1.webp" alt="Classic Shirt">
+                <h3>Classic Shirt</h3>
+                <p>₹599</p>
+                <button onclick="addToCart('Classic Shirt')">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Denim Jacket">
+                <img src="d j/dp11172830.avif" alt="Denim Jacket">
+                <h3>Denim Jacket</h3>
+                <p>₹1299</p>
+                <button onclick="addToCart('Denim Jacket')">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Sport Hoodie">
+                <img src="s h/hoodies-10.jpeg" alt="Sport Hoodie">
+                <h3>Sport Hoodie</h3>
+                <p>₹899</p>
+                <button onclick="addToCart('Sport Hoodie')">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>Women's Collection</h2>
+        <div class="product-list">
+            <div class="product" data-name="Floral Dress">
+                <img src="fd/Floral-Dresses-For-Women.avif" alt="Floral Dress">
+                <h3>Floral Dress</h3>
+                <p>₹799</p>
+                <button onclick="addToCart('Floral Dress')">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Casual Top">
+                <img src="casual/651d7c749e448340fe65a5d8-fashion-ladies-casual-tops-t-shirt-women.jpg" alt="Casual Top">
+                <h3>Casual Top</h3>
+                <p>₹499</p>
+                <button onclick="addToCart('Casual Top')">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Leather Jacket">
+                <img src="lj/39bc9f006523915804c679176a629d36.avif" alt="Leather Jacket">
+                <h3>Leather Jacket</h3>
+                <p>₹1499</p>
+                <button onclick="addToCart('Leather Jacket')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-message"></div>
+
+    <footer>
+        <p>&copy; 2025 Trend Z. All rights reserved.</p>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Login</h2>
+            <input type="text" placeholder="Username"><br><br>
+            <input type="password" placeholder="Password"><br><br>
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+</html>
